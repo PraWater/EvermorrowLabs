@@ -7,7 +7,7 @@ export default function GameCard({
   onGameCardExit,
 }) {
   return (
-    <a className="gamecard" href={gameLink}>
+    <a className="gamecard" href={gameLink} target="_blank">
       <div className="gamecard-overlay gamecard-edge" />
       <div className="gamecard-overlay gamecard-middle" />
       <div className="gamecard-overlay gamecard-edge" />

@@ -60,8 +60,12 @@ html {
   height: 5rem;
   width: 5rem;
   transition: opacity 250ms ease-in-out;
-  transition-delay: 200ms;
   animation: spin 10s linear infinite;
+}
+
+.cursor-gamecard>.cursor-steam {
+  opacity: 1;
+  transition-delay: 200ms;
 }
 
 @keyframes spin {
@@ -72,9 +76,4 @@ html {
   to {
     transform: rotate(360deg);
   }
-}
-
-.cursor-gamecard>.cursor-steam {
-  opacity: 1;
-  transition-delay: 0;
 }
