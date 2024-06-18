@@ -1,7 +1,6 @@
 .games {
   height: 100vh;
   width: 100vw;
-  background: #050e16;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -25,12 +24,10 @@
 
 .games-title {
   color: #fff;
-  font-family: "Bebas Neue";
+  font-family: "FormulaCondensed-Bold";
   font-size: 4rem;
   font-style: normal;
-  font-weight: 400;
   line-height: normal;
-  letter-spacing: -4px;
   text-transform: uppercase;
 }
 

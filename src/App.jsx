@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import Hero from "./components/Hero/Hero";
 import Games from "./components/Games/Games";
 import "./index.css";
+import ScrollText from "./components/ScrollText/ScrollText";
 
 function App() {
   const cursorRef = useRef(null);
@@ -60,6 +61,7 @@ function App() {
         onBrowseEnter={onBrowseEnter}
         onBrowseExit={onBrowseExit}
       />
+      <ScrollText onTitleEnter={onTitleEnter} onTitleExit={onTitleExit} />
       <Games
         onGameCardEnter={onGameCardEnter}
         onGameCardExit={onGameCardExit}

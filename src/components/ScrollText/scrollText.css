@@ -1,0 +1,31 @@
+.scroll-text {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.scroll-text p {
+  color: #fff;
+  font-family: "FormulaCondensed-Bold";
+  font-size: 4.5rem;
+  font-style: normal;
+  line-height: normal;
+  text-transform: uppercase;
+  text-wrap: nowrap;
+}
+
+.scroll-text span {
+  color: #7dcdfb;
+}
+
+@keyframes side1 {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
