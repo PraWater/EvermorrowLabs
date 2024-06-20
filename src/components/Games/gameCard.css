@@ -3,11 +3,25 @@
   width: 30%;
   position: relative;
   aspect-ratio: 420/527;
-  mask-image: url("/gameCardMask.svg");
-  mask-size: cover;
   align-items: center;
   justify-content: center;
+  perspective: 800px;
+}
+
+.gamecard-inner {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  mask-image: url("/gameCardMask.svg");
+  mask-size: cover;
+  justify-content: center;
   overflow: hidden;
+  transition: transform ease-out;
+}
+
+.gamecard-inner:hover {
+  transform: rotateX(var(--x-rotation)) rotateY(var(--y-rotation));
 }
 
 .gamecard-overlay {
@@ -32,14 +46,14 @@
   transition: width 500ms ease-in-out;
 }
 
-.gamecard:hover>.gamecard-middle {
+.gamecard-inner:hover>.gamecard-middle {
   transform: translateY(100%);
 }
 
-.gamecard:hover>.gamecard-edge {
+.gamecard-inner:hover>.gamecard-edge {
   transform: translateY(-100%);
 }
 
-.gamecard:hover>.gamecard-image {
+.gamecard-inner:hover>.gamecard-image {
   width: 110%;
 }
