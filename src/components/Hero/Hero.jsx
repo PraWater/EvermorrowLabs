@@ -1,6 +1,6 @@
+import BrowseButton from "./BrowseButton";
 import "./hero.css";
 import GridSVG from "/grid.svg";
-import BrowseButton from "/browseButton.svg";
 
 export default function Hero({
   onTitleEnter,
@@ -17,15 +17,8 @@ export default function Hero({
       >
         Evermorrow Labs
       </div>
+      <BrowseButton onBrowseEnter={onBrowseEnter} onBrowseExit={onBrowseExit} />
       <img className="grid-svg" src={GridSVG} />
-      <div
-        className="browse-button"
-        onMouseEnter={onBrowseEnter}
-        onMouseLeave={onBrowseExit}
-      >
-        <p className="browse-text">BROWSE</p>
-        <img className="browse-svg" src={BrowseButton} />
-      </div>
     </div>
   );
 }
