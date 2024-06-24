@@ -7,6 +7,7 @@ export default function Hero({
   onTitleExit,
   onBrowseEnter,
   onBrowseExit,
+  scrollToGames,
 }) {
   return (
     <div className="hero">
@@ -17,7 +18,11 @@ export default function Hero({
       >
         Evermorrow Labs
       </div>
-      <BrowseButton onBrowseEnter={onBrowseEnter} onBrowseExit={onBrowseExit} />
+      <BrowseButton
+        onBrowseEnter={onBrowseEnter}
+        onBrowseExit={onBrowseExit}
+        scrollToGames={scrollToGames}
+      />
       <img className="grid-svg" src={GridSVG} />
     </div>
   );

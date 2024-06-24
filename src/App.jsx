@@ -3,9 +3,11 @@ import Hero from "./components/Hero/Hero";
 import Games from "./components/Games/Games";
 import "./index.css";
 import ScrollText from "./components/ScrollText/ScrollText";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const cursorRef = useRef(null);
+  const gamesRef = useRef(null);
 
   useEffect(() => {
     const mouseMove = (e) => {
@@ -19,6 +21,10 @@ function App() {
       window.removeEventListener("mousemove", mouseMove);
     };
   }, []);
+
+  const scrollToGames = () => {
+    gamesRef.current.scrollIntoView();
+  };
 
   const onTitleEnter = () => {
     cursorRef.current.classList.remove("cursor-default");
@@ -60,12 +66,15 @@ function App() {
         onTitleExit={onTitleExit}
         onBrowseEnter={onBrowseEnter}
         onBrowseExit={onBrowseExit}
+        scrollToGames={scrollToGames}
       />
       <ScrollText onTitleEnter={onTitleEnter} onTitleExit={onTitleExit} />
+      <div ref={gamesRef} />
       <Games
         onGameCardEnter={onGameCardEnter}
         onGameCardExit={onGameCardExit}
       />
+      <Footer />
     </>
   );
 }

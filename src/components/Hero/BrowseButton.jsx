@@ -2,7 +2,11 @@ import { useState } from "react";
 import "./browseButton.css";
 import BrowseBox from "/browseButton.svg";
 
-export default function BrowseButton({ onBrowseEnter, onBrowseExit }) {
+export default function BrowseButton({
+  onBrowseEnter,
+  onBrowseExit,
+  scrollToGames,
+}) {
   const [text, setText] = useState("BROWSE");
   const onBrowseHover = () => {
     onBrowseEnter();
@@ -19,6 +23,7 @@ export default function BrowseButton({ onBrowseEnter, onBrowseExit }) {
       className="browse-button"
       onMouseEnter={onBrowseHover}
       onMouseLeave={onBrowseExit}
+      onClick={scrollToGames}
     >
       <p className="browse-text">{text}</p>
       <img className="browse-svg" src={BrowseBox} />

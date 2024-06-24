@@ -1,0 +1,90 @@
+.footer {
+  width: 100vw;
+  height: max-content;
+  position: relative;
+  margin-top: 5vh;
+}
+
+.footer>img {
+  width: 100vw;
+}
+
+.footer-content {
+  width: 100%;
+  height: max-content;
+  background: #06131e;
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  padding-bottom: 8vh;
+  margin-top: -0.5rem;
+}
+
+.footer-content>.evermorrow {
+  width: 25%;
+  aspect-ratio: 1;
+}
+
+.footer-content>.contact {
+  width: 30%;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+  gap: 1rem;
+}
+
+.footer-content>.connect {
+  width: 25%;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+  gap: 1rem;
+}
+
+.footer-content>*>.subtitle {
+  color: #fff;
+  font-family: Bayon;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.contact>.entry {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+
+.contact>.entry>p {
+  color: #fff;
+  font-family: Bayon;
+  font-size: 1.4rem;
+  line-height: 100%;
+  text-transform: uppercase;
+  margin-top: 0.27rem;
+}
+
+.contact>.entry>img {
+  height: 1.8rem;
+  width: 1.8rem;
+}
+
+.connect>.social-icons {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.social-icons>.social-icon {
+  position: relative;
+  height: 2.2rem;
+  width: 2.2rem;
+}
+
+.social-icons>.social-icon>img {
+  height: 100%;
+  width: 100%;
+}
