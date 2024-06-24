@@ -2,7 +2,7 @@
   width: 100vw;
   height: max-content;
   position: relative;
-  margin-top: 5vh;
+  margin-top: 10vh;
 }
 
 .footer>img {
@@ -16,7 +16,7 @@
   display: flex;
   position: relative;
   justify-content: space-around;
-  padding-bottom: 8vh;
+  padding-bottom: 6vh;
   margin-top: -0.5rem;
 }
 

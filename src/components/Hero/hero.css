@@ -8,7 +8,10 @@
 }
 
 .title {
-  color: #cdedff;
+  background: linear-gradient(90deg, #c2e7fb -0.02%, #e2d6fd 99.98%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-align: center;
   text-shadow: 0px 0px 20px rgba(125, 205, 251, 0.5);
   font-family: Orbitron;

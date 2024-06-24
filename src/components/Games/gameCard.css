@@ -26,7 +26,7 @@
 
 .gamecard-overlay {
   height: 100%;
-  background: #103347;
+  background: #14244d;
   mix-blend-mode: color;
   z-index: 9;
   transition: transform 300ms ease-in-out;

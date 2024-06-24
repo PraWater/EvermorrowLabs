@@ -19,7 +19,10 @@
 }
 
 .scroll-text span {
-  color: #7dcdfb;
+  background: var(--gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .scroll-middle {
