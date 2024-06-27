@@ -1,0 +1,40 @@
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logos {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  mask-image: linear-gradient(to right,
+      hsl(0 0% 0% / 0),
+      hsl(0 0% 0% / 1) 5%,
+      hsl(0 0% 0% / 1) 95%,
+      hsl(0 0% 0% / 0));
+}
+
+.logos-slide {
+  display: inline-block;
+  animation: 40s slide infinite linear;
+}
+
+.logos:hover .logos-slide {
+  animation-play-state: paused;
+}
+
+.logos-slide img {
+  height: 120px;
+  margin: 0 40px;
+  filter: grayscale();
+  transition: filter 200ms ease-in-out;
+}
+
+.logos-slide img:hover {
+  filter: none;
+}

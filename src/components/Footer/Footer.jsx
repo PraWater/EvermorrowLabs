@@ -1,18 +1,18 @@
 import "./footer.css";
 
 export default function Footer() {
-  const contacts = [
+  const company = [
     {
-      iconPath: "/icons/map-marker.svg",
-      text: "1901 Thornridge Cir, Shiloh, Hawaii 81063",
+      link: "https://evermorrow-labs.vercel.app/",
+      text: "Team",
     },
     {
-      iconPath: "/icons/mail.svg",
-      text: "evermorrowgames@gmail.com",
+      link: "https://evermorrow-labs.vercel.app/",
+      text: "Careers",
     },
     {
-      iconPath: "/icons/phone.svg",
-      text: "9390145617",
+      link: "https://evermorrow-labs.vercel.app/",
+      text: "Contact Us",
     },
   ];
 
@@ -28,13 +28,12 @@ export default function Footer() {
       <div className="footer-content">
         <img className="evermorrow" src="/evermorrowFull.png" />
         <div className="contact">
-          <h3 className="subtitle">Contact</h3>
-          {contacts.map((contact) => {
+          <h3 className="subtitle">Company</h3>
+          {company.map((c) => {
             return (
-              <div className="entry" key={contact.iconPath}>
-                <img src={contact.iconPath} />
-                <p>{contact.text}</p>
-              </div>
+              <a className="entry" href={c.link} key={c.text} target="_blank">
+                {c.text}
+              </a>
             );
           })}
         </div>

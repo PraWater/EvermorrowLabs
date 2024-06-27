@@ -29,7 +29,7 @@
   background: #14244d;
   mix-blend-mode: color;
   z-index: 9;
-  transition: transform 300ms ease-in-out;
+  transition: transform 450ms ease-in-out;
 }
 
 .gamecard-edge {

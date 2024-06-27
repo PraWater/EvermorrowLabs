@@ -5,6 +5,11 @@
   overflow: hidden;
   gap: 0.5rem;
   margin-bottom: 2rem;
+  mask-image: linear-gradient(to right,
+      hsl(0 0% 0% / 0),
+      hsl(0 0% 0% / 1) 5%,
+      hsl(0 0% 0% / 1) 95%,
+      hsl(0 0% 0% / 0));
 }
 
 .scroll-text-p {
