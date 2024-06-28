@@ -2,15 +2,11 @@ import "./marqueeLogos.css";
 
 export default function MarqueeLogos() {
   const imgPaths = [
-    "/evermorrowFull.png",
-    "/evermorrowFull.png",
-    "/evermorrowFull.png",
-    "/evermorrowFull.png",
-    "/evermorrowFull.png",
-    "/evermorrowFull.png",
-    "/evermorrowFull.png",
-    "/evermorrowFull.png",
-    "/evermorrowFull.png",
+    "/logos/evermorrow.png",
+    "/logos/meta.svg",
+    "/logos/steam.svg",
+    "/logos/ue.svg",
+    "/logos/unity.svg",
   ];
 
   return (
@@ -20,10 +16,9 @@ export default function MarqueeLogos() {
           return <img key={imgPath} src={imgPath} />;
         })}
       </div>
-
       <div className="logos-slide">
         {imgPaths.map((imgPath) => {
-          return <img key={imgPath} src={imgPath} />;
+          return <img key={imgPath + "1"} src={imgPath} />;
         })}
       </div>
     </div>

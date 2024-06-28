@@ -54,9 +54,9 @@
 }
 
 .contact>.entry {
-  display: flex;
-  gap: 1rem;
   width: 100%;
+  text-decoration: none;
+  color: white;
 }
 
 .contact>.entry>p {

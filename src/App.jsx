@@ -5,6 +5,7 @@ import "./index.css";
 import ScrollText from "./components/ScrollText/ScrollText";
 import Footer from "./components/Footer/Footer";
 import MarqueeLogos from "./components/MarqueeLogos/MarqueeLogos";
+import About from "./components/About/About";
 
 function App() {
   const cursorRef = useRef(null);
@@ -75,6 +76,7 @@ function App() {
         onGameCardEnter={onGameCardEnter}
         onGameCardExit={onGameCardExit}
       />
+      <About />
       <MarqueeLogos />
       <Footer />
     </>
