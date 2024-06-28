@@ -1,11 +1,11 @@
 .games {
-  height: max-content;
+  height: 100vh;
   width: 100vw;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 4vw;
+  padding: 4rem 4vw;
   margin-bottom: 4rem;
 }
 
@@ -17,6 +17,7 @@
 
 .games-cards {
   margin-top: 2rem;
+  flex-grow: 1;
   display: flex;
   width: 100%;
   justify-content: start;
