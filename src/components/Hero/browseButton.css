@@ -32,3 +32,13 @@
   text-transform: uppercase;
   z-index: 9;
 }
+
+@media only screen and (max-width: 768px) {
+  .browse-button {
+    width: 13rem;
+  }
+
+  .browse-text {
+    font-size: 1.4rem;
+  }
+}

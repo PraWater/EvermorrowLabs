@@ -39,3 +39,10 @@
 .logos-slide img:hover {
   opacity: 80%;
 }
+
+@media only screen and (max-width: 768px) {
+  .logos-slide img {
+    height: 2rem;
+    margin: 0 1.5rem;
+  }
+}

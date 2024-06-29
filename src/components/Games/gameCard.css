@@ -57,3 +57,9 @@
 .gamecard-inner:hover>.gamecard-image {
   width: 110%;
 }
+
+@media only screen and (max-width: 768px) {
+  .gamecard {
+    width: 100%;
+  }
+}

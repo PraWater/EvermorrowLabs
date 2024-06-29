@@ -66,3 +66,32 @@
 .about-image:hover {
   transform: rotateY(0deg);
 }
+
+@media only screen and (max-width: 768px) {
+  .about {
+    margin-bottom: 2rem;
+    padding: 2rem 4vw;
+  }
+
+  .about-title {
+    font-size: 2.5rem;
+  }
+
+  .about-body {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    padding-right: 0;
+    margin-top: 1.2rem;
+  }
+
+  .about-image {
+    width: 75%;
+    transform: none;
+  }
+
+  .about-body p {
+    font-size: 1.5rem;
+    width: 100%;
+  }
+}
