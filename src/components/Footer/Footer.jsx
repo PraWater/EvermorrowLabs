@@ -1,6 +1,6 @@
 import "./footer.css";
 
-export default function Footer() {
+export default function Footer({ onSubscribeEnter, onSubscribeExit }) {
   const linkSections = ["Use Cases", "Company", "Modules"];
 
   const firstLinks = [
@@ -91,7 +91,12 @@ export default function Footer() {
             <p>Subscribe for updates</p>
             <div className="footer-input">
               <input placeholder="your email" />
-              <button>Subscribe</button>
+              <button
+                onMouseEnter={onSubscribeEnter}
+                onMouseLeave={onSubscribeExit}
+              >
+                Subscribe
+              </button>
             </div>
           </div>
           <div className="footer-comp">
@@ -133,16 +138,16 @@ export default function Footer() {
         </div>
         <div className="footer-below">
           <div className="footer-below-left">
-              <p>© 2024 Evermorrow labs</p>
-              <div className="footer-cc-links">
-                {ccLinks.map((l) => {
-                  return (
-                    <a href={l.link} key={l.link} target="_blank">
-                      {l.text}
-                    </a>
-                  );
-                })}
-              </div>
+            <p>© 2024 Evermorrow labs</p>
+            <div className="footer-cc-links">
+              {ccLinks.map((l) => {
+                return (
+                  <a href={l.link} key={l.link} target="_blank">
+                    {l.text}
+                  </a>
+                );
+              })}
+            </div>
           </div>
           <div className="footer-below-right">
             <img src="/icons/linkedin.svg" />

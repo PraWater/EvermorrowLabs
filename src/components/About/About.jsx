@@ -15,7 +15,7 @@ export default function About() {
           monetised. We are building a free to play ecosystem of fun,
           interactive and interconnected experiences. Each game we release is a
           part of the Evermorrow Mesh, allowing you to jump from one world to
-          another seemlessly. Free and accessible across all Horizon OS
+          another seamlessly. Free and accessible across all Horizon OS
           supported platforms.
         </p>
         <div className="about-image">

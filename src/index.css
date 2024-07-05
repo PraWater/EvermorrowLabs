@@ -73,6 +73,23 @@ body {
   transition-delay: 150ms;
 }
 
+.cursor-preloading {
+  z-index: -1;
+  position: fixed;
+  bottom: 0;
+  opacity: 0;
+}
+
+.cursor-subscribe {
+  height: 3rem;
+  width: 3rem;
+  rotate: -90deg;
+  transform: translate(50%, -50%);
+  background: url("/arrow-down.svg");
+  background-size: cover;
+  border: 2px solid var(--gradient);
+}
+
 @keyframes spin {
   from {
     transform: rotate(0deg);

@@ -58,6 +58,16 @@ function App() {
     cursorRef.current.classList.add("cursor-default");
   };
 
+  const onSubscribeEnter = () => {
+    cursorRef.current.classList.remove("cursor-default");
+    cursorRef.current.classList.add("cursor-subscribe");
+  };
+
+  const onSubscribeExit = () => {
+    cursorRef.current.classList.remove("cursor-subscribe");
+    cursorRef.current.classList.add("cursor-default");
+  };
+
   return (
     <>
       <div className="cursor cursor-default" ref={cursorRef}>
@@ -78,7 +88,14 @@ function App() {
       />
       <About />
       <MarqueeLogos />
-      <Footer />
+      <Footer
+        onSubscribeEnter={onSubscribeEnter}
+        onSubscribeExit={onSubscribeExit}
+      />
+      <div className="cursor-preloading">
+        <div className="cursor-gamecard" />
+        <div className="cursor-browse" />
+      </div>
     </>
   );
 }

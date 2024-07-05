@@ -176,7 +176,9 @@ svg.active .svg-elem-10 {
   display: grid;
   place-items: center;
   background: #050e16;
-  transition: visibility 1s, opacity 500ms ease-in-out;
+  transition:
+    visibility 1s,
+    opacity 500ms ease-in-out;
   opacity: 1;
   visibility: visible;
 }
