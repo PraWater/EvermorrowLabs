@@ -10,13 +10,6 @@
   --gradient: linear-gradient(90deg, #7dcdfb -0.02%, #bb9ef7 99.98%);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  cursor: none;
-}
-
 html {
   scroll-behavior: smooth;
 }
