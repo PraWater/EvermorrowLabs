@@ -182,3 +182,19 @@ svg.active .svg-elem-10 {
   opacity: 1;
   visibility: visible;
 }
+
+#root {
+  overflow-x: hidden;
+}
+
+:root {
+  --gradient: linear-gradient(90deg, #7dcdfb -0.02%, #bb9ef7 99.98%);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #050e16;
+}
