@@ -1,6 +1,11 @@
 import "./footer.css";
 
-export default function Footer({ onSubscribeEnter, onSubscribeExit }) {
+export default function Footer({
+  onSubscribeEnter,
+  onSubscribeExit,
+  onLinkEnter,
+  onLinkExit,
+}) {
   const linkSections = ["Use Cases", "Company", "Modules"];
 
   const firstLinks = [
@@ -104,7 +109,13 @@ export default function Footer({ onSubscribeEnter, onSubscribeExit }) {
             <div className="footer-links">
               {firstLinks.map((l) => {
                 return (
-                  <a href={l.link} key={l.link} target="_blank">
+                  <a
+                    href={l.link}
+                    key={l.link}
+                    target="_blank"
+                    onMouseEnter={onLinkEnter}
+                    onMouseLeave={onLinkExit}
+                  >
                     {l.text}
                   </a>
                 );
@@ -116,7 +127,13 @@ export default function Footer({ onSubscribeEnter, onSubscribeExit }) {
             <div className="footer-links">
               {secondLinks.map((l) => {
                 return (
-                  <a href={l.link} key={l.link} target="_blank">
+                  <a
+                    href={l.link}
+                    key={l.link}
+                    target="_blank"
+                    onMouseEnter={onLinkEnter}
+                    onMouseLeave={onLinkExit}
+                  >
                     {l.text}
                   </a>
                 );
@@ -128,7 +145,13 @@ export default function Footer({ onSubscribeEnter, onSubscribeExit }) {
             <div className="footer-links">
               {thirdLinks.map((l) => {
                 return (
-                  <a href={l.link} key={l.link} target="_blank">
+                  <a
+                    href={l.link}
+                    key={l.link}
+                    target="_blank"
+                    onMouseEnter={onLinkEnter}
+                    onMouseLeave={onLinkExit}
+                  >
                     {l.text}
                   </a>
                 );
@@ -142,7 +165,13 @@ export default function Footer({ onSubscribeEnter, onSubscribeExit }) {
             <div className="footer-cc-links">
               {ccLinks.map((l) => {
                 return (
-                  <a href={l.link} key={l.link} target="_blank">
+                  <a
+                    href={l.link}
+                    key={l.link}
+                    target="_blank"
+                    onMouseEnter={onLinkEnter}
+                    onMouseLeave={onLinkExit}
+                  >
                     {l.text}
                   </a>
                 );

@@ -9,13 +9,8 @@
   overflow: hidden;
 }
 
-.title {
-  background: linear-gradient(90deg, #c2e7fb -0.02%, #e2d6fd 99.98%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.heading {
   text-align: center;
-  text-shadow: 0px 0px 20px rgba(125, 205, 251, 0.5);
   font-family: Orbitron;
   font-size: 5rem;
   font-style: normal;
@@ -23,6 +18,18 @@
   line-height: normal;
   top: 15vh;
   position: absolute;
+}
+
+.title {
+  color: #c2e7fb;
+  text-shadow: 0px 0px 20px rgba(125, 205, 251, 0.5);
+}
+
+.outline {
+  z-index: 3;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 0.1rem;
+  -webkit-text-stroke-color: #c2e7fb;
 }
 
 .grid {
@@ -46,7 +53,7 @@
     transform: translate(5%, 2%);
   }
 
-  .title {
+  .heading {
     font-size: 2.7rem;
   }
 }

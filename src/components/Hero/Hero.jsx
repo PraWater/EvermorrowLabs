@@ -11,13 +11,14 @@ export default function Hero({
   return (
     <div className="hero">
       <div
-        className="title"
+        className="outline heading"
         onMouseEnter={onTitleEnter}
         onMouseLeave={onTitleExit}
       >
         Evermorrow Labs
       </div>
-      <img className="vrGuy" src="/vrGuy.png"/>
+      <div className="title heading">Evermorrow Labs</div>
+      <img className="vrGuy" src="/vrGuy.png" />
       <BrowseButton
         onBrowseEnter={onBrowseEnter}
         onBrowseExit={onBrowseExit}

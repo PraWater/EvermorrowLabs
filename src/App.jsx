@@ -68,6 +68,16 @@ function App() {
     cursorRef.current.classList.add("cursor-default");
   };
 
+  const onLinkEnter = () => {
+    cursorRef.current.classList.remove("cursor-default");
+    cursorRef.current.classList.add("cursor-link");
+  };
+
+  const onLinkExit = () => {
+    cursorRef.current.classList.remove("cursor-link");
+    cursorRef.current.classList.add("cursor-default");
+  };
+
   return (
     <>
       <div className="cursor cursor-default" ref={cursorRef}>
@@ -91,6 +101,8 @@ function App() {
       <Footer
         onSubscribeEnter={onSubscribeEnter}
         onSubscribeExit={onSubscribeExit}
+        onLinkEnter={onLinkEnter}
+        onLinkExit={onLinkExit}
       />
       <div className="cursor-preloading">
         <div className="cursor-gamecard" />

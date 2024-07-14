@@ -5,7 +5,7 @@
   margin-top: 10vh;
 }
 
-.footer > img {
+.footer>img {
   width: 100vw;
 }
 
@@ -134,8 +134,12 @@
   text-decoration: none;
 }
 
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
 .footer-below {
-  border-top: 0.1rem #42436a solid;
+  border-top: 0.1rem #a398bb solid;
   width: 100%;
   height: max-content;
   display: flex;
@@ -152,7 +156,7 @@
 }
 
 .footer-below-left p {
-  color: #42436a;
+  color: #a398bb;
   font-family: Bayon;
   font-size: 1.1875rem;
   font-style: normal;
@@ -167,7 +171,7 @@
 }
 
 .footer-cc-links a {
-  color: #42436a;
+  color: #a398bb;
   text-decoration: none;
   font-family: Bayon;
   font-size: 1.1875rem;
@@ -175,6 +179,10 @@
   font-weight: 400;
   line-height: normal;
   text-transform: uppercase;
+}
+
+.footer-cc-links a:hover {
+  text-decoration: underline;
 }
 
 .footer-below-right img {
