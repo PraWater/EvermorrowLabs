@@ -1,4 +1,3 @@
-import React from "react";
 import "./scrollText.css";
 
 export default function ScrollText({ onTitleEnter, onTitleExit }) {
@@ -10,25 +9,37 @@ export default function ScrollText({ onTitleEnter, onTitleExit }) {
 
   return (
     <div className="scroll-text">
-      {lines.map((line) => (
-        <div
-          className="scroll-text-wrap"
-          onMouseEnter={onTitleEnter}
-          onMouseOut={onTitleExit}
-          key={line}
-        >
-          {[1, 2].map((_, index) => (
-            <div className="scroll-text-p" key={index}>
-              {[true, false, true, false].map((isGradient, i) => (
-                <React.Fragment key={i}>
-                  <span className={isGradient ? "gradient" : ""}>{line}</span>
-                  {i < 3 && <span>&middot;</span>}
-                </React.Fragment>
-              ))}
+      {lines.map((line) => {
+        return (
+          <div
+            className="scroll-text-wrap"
+            onMouseEnter={onTitleEnter}
+            onMouseOut={onTitleExit}
+            key={line}
+          >
+            <div className="scroll-text-p">
+              <span className="gradient">{line}</span>
+              <span>&middot;</span>
+              <span>{line}</span>
+              <span>&middot;</span>
+              <span className="gradient">{line}</span>
+              <span>&middot;</span>
+              <span>{line}</span>
+              <span>&middot;</span>
             </div>
-          ))}
-        </div>
-      ))}
+            <div className="scroll-text-p">
+              <span className="gradient">{line}</span>
+              <span>&middot;</span>
+              <span>{line}</span>
+              <span>&middot;</span>
+              <span className="gradient">{line}</span>
+              <span>&middot;</span>
+              <span>{line}</span>
+              <span>&middot;</span>
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
 }
