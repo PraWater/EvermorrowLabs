@@ -4,6 +4,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: end;
   align-items: center;
   overflow: hidden;
 }
@@ -20,19 +21,29 @@
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-  top: 20vh;
+  top: 15vh;
   position: absolute;
 }
 
-.grid-svg {
-  position: absolute;
-  bottom: 0;
+.grid {
   width: 100vw;
+  height: 28vh;
+  z-index: 2;
+}
+
+.vrGuy {
+  aspect-ratio: 887/581;
+  height: 43vh;
+  transform: translate(-4%, 2%);
 }
 
 @media only screen and (max-width: 768px) {
   .grid-svg {
-    width: 250vw;
+    width: 500vw;
+  }
+
+  .vrGuy {
+    transform: translate(5%, 2%);
   }
 
   .title {

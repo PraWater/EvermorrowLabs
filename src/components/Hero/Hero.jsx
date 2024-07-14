@@ -1,6 +1,5 @@
 import BrowseButton from "./BrowseButton";
 import "./hero.css";
-import GridSVG from "/grid.svg";
 
 export default function Hero({
   onTitleEnter,
@@ -18,12 +17,13 @@ export default function Hero({
       >
         Evermorrow Labs
       </div>
+      <img className="vrGuy" src="/vrGuy.png"/>
       <BrowseButton
         onBrowseEnter={onBrowseEnter}
         onBrowseExit={onBrowseExit}
         scrollToGames={scrollToGames}
       />
-      <img className="grid-svg" src={GridSVG} />
+      <img className="grid" src="/grid.png" />
     </div>
   );
 }
