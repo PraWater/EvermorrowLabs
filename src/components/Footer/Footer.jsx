@@ -6,66 +6,73 @@ export default function Footer({
   onLinkEnter,
   onLinkExit,
 }) {
-  const linkSections = ["Use Cases", "Company", "Modules"];
-
-  const firstLinks = [
+  const linkSections = [
     {
-      text: "User onboarding & activation",
-      link: "1something.com",
+      title: "Use Cases",
+      links: [
+        {
+          text: "User onboarding & activation",
+          link: "1something.com",
+        },
+        {
+          text: "Feature adoption",
+          link: "2something.com",
+        },
+        {
+          text: "Engagement",
+          link: "3something.com",
+        },
+        {
+          text: "Conversion & Monetization",
+          link: "4something.com",
+        },
+        {
+          text: "User research & Insights",
+          link: "5something.com",
+        },
+      ],
     },
     {
-      text: "Feature adoption",
-      link: "2something.com",
+      title: "Company",
+      links: [
+        {
+          text: "How it works",
+          link: "1something.com",
+        },
+        {
+          text: "Blog",
+          link: "2something.com",
+        },
+        {
+          text: "Contact",
+          link: "3something.com",
+        },
+        {
+          text: "Glossary",
+          link: "4something.com",
+        },
+      ],
     },
     {
-      text: "Engagement",
-      link: "3something.com",
-    },
-    {
-      text: "Conversion & Monetization",
-      link: "4something.com",
-    },
-    {
-      text: "User research & Insights",
-      link: "5something.com",
-    },
-  ];
-
-  const secondLinks = [
-    {
-      text: "How it works",
-      link: "1something.com",
-    },
-    {
-      text: "Blog",
-      link: "2something.com",
-    },
-    {
-      text: "Contact",
-      link: "3something.com",
-    },
-    {
-      text: "Glossary",
-      link: "4something.com",
-    },
-  ];
-
-  const thirdLinks = [
-    {
-      text: "Blog",
-      link: "2something.com",
-    },
-    {
-      text: "How it works",
-      link: "1something.com",
-    },
-    {
-      text: "Glossary",
-      link: "4something.com",
-    },
-    {
-      text: "Contact",
-      link: "3something.com",
+      title: "Modules",
+      links: [
+        {
+          text: "Blog",
+          link: "2something.com",
+        },
+        {
+          text: "How it works",
+          link: "1something.com",
+        },
+        {
+          text: "Glossary",
+          link: "4something.com",
+        },
+        {
+          text: "Contact",
+          link: "3something.com",
+        },
+      ],
     },
   ];
 
@@ -87,6 +94,22 @@ export default function Footer({
       link: "4something.com",
     },
   ];
+
+  const socials = [
+    {
+      iconPath: "/icons/linkedin.svg",
+      link: "https://www.linkedin.com/company/evermorrow-labs/",
+    },
+    {
+      iconPath: "/icons/instagram.svg",
+      link: "https://www.instagram.com/evermorrowlabs/",
+    },
+    {
+      iconPath: "/icons/x.svg",
+      link: "https://www.x.com/evermorrowlabs/",
+    },
+  ];
+
   return (
     <div className="footer">
       <img src="/footerTop.svg" />
@@ -104,60 +127,28 @@ export default function Footer({
               </button>
             </div>
           </div>
-          <div className="footer-comp">
-            <h3>{linkSections[0]}</h3>
-            <div className="footer-links">
-              {firstLinks.map((l) => {
-                return (
-                  <a
-                    href={l.link}
-                    key={l.link}
-                    target="_blank"
-                    onMouseEnter={onLinkEnter}
-                    onMouseLeave={onLinkExit}
-                  >
-                    {l.text}
-                  </a>
-                );
-              })}
-            </div>
-          </div>
-          <div className="footer-comp">
-            <h3>{linkSections[1]}</h3>
-            <div className="footer-links">
-              {secondLinks.map((l) => {
-                return (
-                  <a
-                    href={l.link}
-                    key={l.link}
-                    target="_blank"
-                    onMouseEnter={onLinkEnter}
-                    onMouseLeave={onLinkExit}
-                  >
-                    {l.text}
-                  </a>
-                );
-              })}
-            </div>
-          </div>
-          <div className="footer-comp">
-            <h3>{linkSections[2]}</h3>
-            <div className="footer-links">
-              {thirdLinks.map((l) => {
-                return (
-                  <a
-                    href={l.link}
-                    key={l.link}
-                    target="_blank"
-                    onMouseEnter={onLinkEnter}
-                    onMouseLeave={onLinkExit}
-                  >
-                    {l.text}
-                  </a>
-                );
-              })}
-            </div>
-          </div>
+          {linkSections.map((linkSection, ind) => {
+            return (
+              <div className="footer-comp" key={ind}>
+                <h3>{linkSection.title}</h3>
+                <div className="footer-links">
+                  {linkSection.links.map((l) => {
+                    return (
+                      <a
+                        href={l.link}
+                        key={l.link}
+                        target="_blank"
+                        onMouseEnter={onLinkEnter}
+                        onMouseLeave={onLinkExit}
+                      >
+                        {l.text}
+                      </a>
+                    );
+                  })}
+                </div>
+              </div>
+            );
+          })}
         </div>
         <div className="footer-below">
           <div className="footer-below-left">
@@ -179,7 +170,19 @@ export default function Footer({
             </div>
           </div>
           <div className="footer-below-right">
-            <img src="/icons/linkedin.svg" />
+            {socials.map((social) => {
+              return (
+                <a
+                  href={social.link}
+                  key={social.link}
+                  target="_blank"
+                  onMouseEnter={onLinkEnter}
+                  onMouseLeave={onLinkExit}
+                >
+                  <img src={social.iconPath} />
+                </a>
+              );
+            })}
           </div>
         </div>
       </div>

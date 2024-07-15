@@ -185,9 +185,18 @@
   text-decoration: underline;
 }
 
+.footer-below-right {
+  display: flex;
+  gap: 1rem;
+}
+
 .footer-below-right img {
   width: 2rem;
   height: 2rem;
+}
+
+.footer-below-right img:hover {
+  transform: scale(1.05, 1.05);
 }
 
 @media only screen and (max-width: 768px) {
