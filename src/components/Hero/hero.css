@@ -7,6 +7,8 @@
   justify-content: end;
   align-items: center;
   overflow: hidden;
+  background: url("/bg.png");
+  background-size: cover;
 }
 
 .heading {
@@ -106,11 +108,11 @@
   }
 
   .header-logo {
-    width: 3rem;
+    width: 3.8rem;
   }
 
   .connect-button {
-    width: 6rem;
+    width: 7rem;
     height: 2rem;
   }
 
