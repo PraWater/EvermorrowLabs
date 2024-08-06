@@ -89,6 +89,8 @@ function App() {
         onBrowseEnter={onBrowseEnter}
         onBrowseExit={onBrowseExit}
         scrollToGames={scrollToGames}
+        onLinkEnter={onLinkEnter}
+        onLinkExit={onLinkExit}
       />
       <ScrollText onTitleEnter={onTitleEnter} onTitleExit={onTitleExit} />
       <div ref={gamesRef} />

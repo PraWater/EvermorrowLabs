@@ -6,10 +6,24 @@ export default function Hero({
   onTitleExit,
   onBrowseEnter,
   onBrowseExit,
+  onLinkEnter,
+  onLinkExit,
   scrollToGames,
 }) {
   return (
     <div className="hero">
+      <div className="header">
+        <img className="header-logo" src="/evermorrow.png" />
+        <div
+          className="connect-button"
+          onMouseEnter={onLinkEnter}
+          onMouseLeave={onLinkExit}
+          onClick={scrollToGames}
+        >
+          <p className="connect-text">Connect</p>
+          <img className="connect-svg" src="/connectButton.svg" />
+        </div>
+      </div>
       <div
         className="outline heading"
         onMouseEnter={onTitleEnter}
